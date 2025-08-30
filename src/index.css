@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --white: 0 0% 100%;
+    --black: 0 0% 0%;
+    
+    /* Gray Scale */
+    --gray-25: 210 20% 99%;
+    --gray-50: 210 20% 98%;
+    --gray-100: 210 17% 96%;
+    --gray-200: 214 14% 91%;
+    --gray-300: 217 11% 83%;
+    --gray-400: 216 9% 69%;
+    --gray-500: 216 11% 52%;
+    --gray-600: 215 17% 35%;
+    --gray-700: 216 20% 24%;
+    --gray-800: 218 23% 16%;
+    --gray-900: 221 39% 11%;
+    --gray-950: 222 47% 9%;
+    
+    /* Brand Purple */
+    --purple-25: 273 100% 99%;
+    --purple-50: 273 100% 98%;
+    --purple-100: 273 100% 96%;
+    --purple-200: 273 91% 93%;
+    --purple-300: 272 87% 86%;
+    --purple-400: 271 85% 78%;
+    --purple-500: 248 70% 64%;
+    --purple-600: 251 68% 55%;
+    --purple-700: 252 69% 47%;
+    --purple-800: 252 71% 39%;
+    --purple-900: 253 68% 31%;
+    --purple-950: 251 71% 20%;
+    
+    /* Error Red */
+    --red-25: 8 100% 98%;
+    --red-50: 8 100% 97%;
+    --red-100: 8 100% 94%;
+    --red-200: 8 96% 90%;
+    --red-300: 8 95% 81%;
+    --red-400: 8 93% 69%;
+    --red-500: 8 85% 59%;
+    --red-600: 8 79% 49%;
+    --red-700: 8 79% 40%;
+    --red-800: 8 72% 32%;
+    --red-900: 8 69% 29%;
+    --red-950: 8 81% 19%;
+    
+    /* Warning Orange-Yellow */
+    --orange-25: 39 100% 97%;
+    --orange-50: 40 100% 97%;
+    --orange-100: 40 97% 89%;
+    --orange-200: 41 96% 77%;
+    --orange-300: 42 94% 64%;
+    --orange-400: 43 96% 56%;
+    --orange-500: 38 92% 50%;
+    --orange-600: 32 95% 44%;
+    --orange-700: 26 91% 37%;
+    --orange-800: 21 90% 31%;
+    --orange-900: 17 88% 26%;
+    --orange-950: 15 79% 17%;
+    
+    /* Success Green */
+    --green-25: 151 81% 96%;
+    --green-50: 143 85% 96%;
+    --green-100: 141 79% 85%;
+    --green-200: 141 84% 79%;
+    --green-300: 142 77% 73%;
+    --green-400: 142 69% 58%;
+    --green-500: 142 71% 45%;
+    --green-600: 142 76% 36%;
+    --green-700: 142 72% 29%;
+    --green-800: 142 64% 24%;
+    --green-900: 143 61% 20%;
+    --green-950: 144 60% 17%;
+    
+    /* Secondary Orange */
+    --sec-orange-25: 33 100% 98%;
+    --sec-orange-50: 34 100% 97%;
+    --sec-orange-100: 33 100% 92%;
+    --sec-orange-200: 33 100% 84%;
+    --sec-orange-300: 33 100% 73%;
+    --sec-orange-400: 33 100% 65%;
+    --sec-orange-500: 22 93% 51%;
+    --sec-orange-600: 22 78% 47%;
+    --sec-orange-700: 22 75% 40%;
+    --sec-orange-800: 22 69% 35%;
+    --sec-orange-900: 22 72% 30%;
+    --sec-orange-950: 22 78% 20%;
+    
+    /* Light Blue */
+    --blue-25: 204 100% 97%;
+    --blue-50: 204 100% 97%;
+    --blue-100: 204 94% 94%;
+    --blue-200: 201 94% 86%;
+    --blue-300: 199 95% 74%;
+    --blue-400: 198 93% 60%;
+    --blue-500: 198 89% 48%;
+    --blue-600: 200 98% 39%;
+    --blue-700: 201 96% 32%;
+    --blue-800: 201 90% 27%;
+    --blue-900: 202 80% 24%;
+    --blue-950: 202 80% 16%;
+
+    /* Design System Mapping */
+    --background: var(--white);
+    --foreground: var(--gray-900);
+
+    --card: var(--white);
+    --card-foreground: var(--gray-900);
+
+    --popover: var(--white);
+    --popover-foreground: var(--gray-900);
+
+    --primary: var(--purple-500);
+    --primary-foreground: var(--white);
+    --primary-glow: var(--purple-400);
+
+    --secondary: var(--gray-100);
+    --secondary-foreground: var(--gray-900);
+
+    --muted: var(--gray-50);
+    --muted-foreground: var(--gray-500);
+
+    --accent: var(--purple-100);
+    --accent-foreground: var(--purple-900);
+    --accent-light: var(--purple-50);
+
+    --destructive: var(--red-500);
+    --destructive-foreground: var(--white);
+
+    --success: var(--green-500);
+    --success-foreground: var(--white);
+
+    --warning: var(--orange-500);
+    --warning-foreground: var(--white);
+
+    --border: var(--gray-200);
+    --input: var(--gray-200);
+    --ring: var(--purple-500);
+
+    --surface: var(--white);
+    --surface-secondary: var(--gray-25);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--purple-500)), hsl(var(--purple-400)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--purple-100)), hsl(var(--purple-50)));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--white)), hsl(var(--gray-25)));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 16px -2px hsl(var(--purple-500) / 0.1);
+    --shadow-medium: 0 8px 32px -4px hsl(var(--purple-500) / 0.15);
+    --shadow-strong: 0 12px 48px -6px hsl(var(--purple-500) / 0.2);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: var(--white);
+    --sidebar-foreground: var(--gray-900);
+    --sidebar-primary: var(--purple-500);
+    --sidebar-primary-foreground: var(--white);
+    --sidebar-accent: var(--gray-50);
+    --sidebar-accent-foreground: var(--purple-600);
+    --sidebar-border: var(--gray-200);
+    --sidebar-ring: var(--purple-500);
+  }
+
+  .dark {
+    /* Design System Mapping for Dark Mode */
+    --background: var(--gray-900);
+    --foreground: var(--gray-50);
+
+    --card: var(--gray-800);
+    --card-foreground: var(--gray-50);
+
+    --popover: var(--gray-800);
+    --popover-foreground: var(--gray-50);
+
+    --primary: var(--purple-400);
+    --primary-foreground: var(--gray-900);
+    --primary-glow: var(--purple-300);
+
+    --secondary: var(--gray-800);
+    --secondary-foreground: var(--gray-50);
+
+    --muted: var(--gray-800);
+    --muted-foreground: var(--gray-400);
+
+    --accent: var(--gray-700);
+    --accent-foreground: var(--purple-300);
+    --accent-light: var(--gray-800);
+
+    --destructive: var(--red-400);
+    --destructive-foreground: var(--gray-900);
+
+    --success: var(--green-400);
+    --success-foreground: var(--gray-900);
+
+    --warning: var(--orange-400);
+    --warning-foreground: var(--gray-900);
+
+    --border: var(--gray-700);
+    --input: var(--gray-700);
+    --ring: var(--purple-400);
+
+    --surface: var(--gray-900);
+    --surface-secondary: var(--gray-800);
+
+    --sidebar-background: var(--gray-900);
+    --sidebar-foreground: var(--gray-50);
+    --sidebar-primary: var(--purple-400);
+    --sidebar-primary-foreground: var(--gray-900);
+    --sidebar-accent: var(--gray-800);
+    --sidebar-accent-foreground: var(--purple-300);
+    --sidebar-border: var(--gray-700);
+    --sidebar-ring: var(--purple-400);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
